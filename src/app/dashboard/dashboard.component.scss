@@ -1,0 +1,192 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    h1 {
+        min-width: 240px;
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        color: #555;
+        mat-icon {
+            color: #555;
+            margin-right: 15px;
+            height: 35px;
+            font-size: 35px;
+        }
+    }
+    .wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        mat-form-field {
+            flex-grow: 1;
+        }
+        mat-form-field.mat-form-field {
+            font-size: 12px;
+        }
+        mat-form-field::ng-deep {
+            .mat-form-field-wrapper {
+                padding-bottom: 0;
+            }
+        }
+        mat-icon {
+            margin-left: 10px;
+        }
+        .user-btn {
+            margin-left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            height: 22px;
+            width: 22px;
+            border: none;
+            background-color: #a53535;
+            color: white;
+        }
+    }
+  }
+  
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .col {
+      padding: 15px;
+      &:nth-child(1) {
+        min-width: 240px;
+        padding-left: 0;
+        .add-link::ng-deep {
+          border-radius: 40px;
+          padding: 5px 25px;
+          margin-bottom: 15px;
+          margin-left: 10px;
+          .plus-icon {
+            font-weight: bold;
+            font-size: 30px;
+            margin-right: 12px;
+            color: #555;
+          }
+        }
+        .nav-list {
+          list-style: none;
+          .nav-item {
+            button {
+              display: flex;
+              align-items: center;
+              width: 200px;
+              padding: 13px 0 13px 15px;
+              cursor: pointer;
+              border: 0;
+              text-align: left;
+              border-bottom-right-radius: 40px;
+              border-top-right-radius: 40px;
+              background-color: transparent;
+              transition: background-color 0.2s;
+              &.active {
+                background-color: rgb(228, 228, 255);
+                color: rgb(95, 95, 216);
+                font-weight: bold;
+                .nav-icon {
+                  color: rgb(95, 95, 216);
+                }
+              }
+              .nav-icon {
+                margin-right: 15px;
+                color: #555;
+              }
+            }
+          }
+        }
+        .wrapper {
+            padding-left: 15px;
+            padding-top: 15px;
+            padding-right: 30px;
+            & > div:nth-child(1) {
+                display: flex;
+                align-items: center;
+                span {
+                    font-size: 13px;
+                    margin-left: 15px;
+                }
+            }
+            & > div:nth-child(2) {
+               .percent {
+                   margin-top: 15px;
+                   height: 3px;
+                   background-color: #aaa;
+               }
+               .text {
+                   font-size: 12px;
+                   margin-top: 5px;
+               }
+            }
+            .buy-storage {
+                display: inline-block;
+                margin-top: 15px;
+                color: #5f5fd8;
+            }
+        }
+      }
+      &:nth-child(2) {
+        flex-grow: 1;
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .drive-menu {
+                margin-bottom: 5px;
+            }
+            mat-icon {
+                margin-left: 10px;
+            }
+        }
+        table {
+          width: 100%;
+          margin-top: 20px;
+          &::ng-deep {
+              tbody {
+                  tr:hover {
+                      cursor: pointer;
+                      background-color: #ddd;
+                  }
+              }
+          }
+        }
+        th.mat-sort-header-sorted {
+          color: black;
+        }
+        .folder-icon {
+          position: relative;
+          top: 6px;
+          color: #555;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
+  mat-icon {
+      color: #555;
+      cursor: pointer;
+  }
+
+  @media only screen and (max-width: 940px) {
+    .header {
+        h1 {
+            min-width: 200px;
+        }
+    }
+    .container {
+        .col {
+          &:nth-child(1) {
+            padding-right: 0;
+            min-width: 200px;
+          }
+        }
+    }
+  }
+  
